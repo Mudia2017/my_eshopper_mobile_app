@@ -32,8 +32,10 @@ class _MyPtdReviewSessionState extends State<MyPtdReviewSession> {
   getPendingPtdReview() async {
     var data = {'userName': widget.userName};
     var response = await http.post(
+      // Uri.parse(
+      //     'http://192.168.43.50:8000/apis/v1/homePage/api_pendingReview/'),
       Uri.parse(
-          'http://192.168.43.50:8000/apis/v1/homePage/api_pendingReview/'),
+          'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_pendingReview/'),
       body: jsonEncode(data),
       headers: {
         "Content-Type": "application/json",

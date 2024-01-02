@@ -81,13 +81,13 @@ class _CartPageMainLayOutState extends State<CartPageMainLayOut> {
                 width: 60,
                 child: Column(
                   children: [
-                    if (widget.image != "http://192.168.43.50:8000")
+                    if (widget.image != "http://Oneluvtoall.pythonanywhere.com")
                       Flexible(
                           child: Image.network(
                         widget.image,
                         fit: BoxFit.contain,
                       )),
-                    if (widget.image == "http://192.168.43.50:8000")
+                    if (widget.image == "http://Oneluvtoall.pythonanywhere.com")
                       const Icon(
                         Icons.photo_size_select_actual_sharp,
                         color: Colors.black26,
@@ -339,14 +339,14 @@ class WishListProduct extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    if (productImage != "http://192.168.43.50:8000")
+                    if (productImage != "http://Oneluvtoall.pythonanywhere.com")
                       Expanded(
                         child: Image.network(
                           productImage,
                           fit: BoxFit.contain,
                         ),
                       ),
-                    if (productImage == "http://192.168.43.50:8000")
+                    if (productImage == "http://Oneluvtoall.pythonanywhere.com")
                       const Icon(
                         Icons.photo_size_select_actual_sharp,
                         color: Colors.black26,
@@ -613,7 +613,7 @@ class WishListProduct extends StatelessWidget {
                                                 if (sameCategoryPtdData
                                                                 .toList()[index]
                                                             ['imageURL'] !=
-                                                        "http://192.168.43.50:8000" &&
+                                                        "http://Oneluvtoall.pythonanywhere.com" &&
                                                     sameCategoryPtdData
                                                                 .toList()[index]
                                                             ['imageURL'] !=
@@ -1058,11 +1058,13 @@ class RecentViewedProduct extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    if (productImage != "http://192.168.43.50:8000" &&
+                    if (productImage !=
+                            "http://Oneluvtoall.pythonanywhere.com" &&
                         productImage != '')
                       Expanded(
                         child: Image.network(
-                          "http://192.168.43.50:8000" + productImage,
+                          "http://Oneluvtoall.pythonanywhere.com" +
+                              productImage,
                           fit: BoxFit.contain,
                         ),
                       ),

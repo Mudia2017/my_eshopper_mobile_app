@@ -59,8 +59,10 @@ class _ProductDetailState extends State<ProductDetail> {
     };
     if (token != '' && token != null) {
       response = await http.post(
+        // Uri.parse(
+        //     "http://192.168.43.50:8000/apis/v1/homePage/api_get_PtdDetail_SameCategoryPtd/"),
         Uri.parse(
-            "http://192.168.43.50:8000/apis/v1/homePage/api_get_PtdDetail_SameCategoryPtd/"),
+            "http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_get_PtdDetail_SameCategoryPtd/"),
         body: json.encode(data),
         headers: {
           "Content-Type": "application/json",
@@ -69,8 +71,10 @@ class _ProductDetailState extends State<ProductDetail> {
       );
     } else {
       response = await http.post(
+        // Uri.parse(
+        //     "http://192.168.43.50:8000/apis/v1/homePage/api_get_PtdDetail_SameCategoryPtd/"),
         Uri.parse(
-            "http://192.168.43.50:8000/apis/v1/homePage/api_get_PtdDetail_SameCategoryPtd/"),
+            "http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_get_PtdDetail_SameCategoryPtd/"),
         body: json.encode(data),
         headers: {
           "Content-Type": "application/json",
@@ -315,7 +319,7 @@ class _ProductDetailState extends State<ProductDetail> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               if ('${ptdDetailRecord['imageURL']}' !=
-                                  "http://192.168.43.50:8000")
+                                  "http://Oneluvtoall.pythonanywhere.com")
                                 Flexible(
                                   child: Image.network(
                                     '${ptdDetailRecord['imageURL']}',
@@ -323,7 +327,7 @@ class _ProductDetailState extends State<ProductDetail> {
                                   ),
                                 ),
                               if ('${ptdDetailRecord['imageURL']}' ==
-                                  "http://192.168.43.50:8000")
+                                  "http://Oneluvtoall.pythonanywhere.com")
                                 const Flexible(
                                   child: Icon(
                                     Icons.photo_size_select_actual_sharp,

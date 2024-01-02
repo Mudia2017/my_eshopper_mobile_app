@@ -120,14 +120,14 @@ class CategorySingleProduct extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    if (productImage != "http://192.168.43.50:8000")
+                    if (productImage != "http://Oneluvtoall.pythonanywhere.com")
                       Flexible(
                         child: Image.network(
                           productImage,
                           fit: BoxFit.scaleDown,
                         ),
                       ),
-                    if (productImage == "http://192.168.43.50:8000")
+                    if (productImage == "http://Oneluvtoall.pythonanywhere.com")
                       const Icon(
                         Icons.photo_size_select_actual_sharp,
                         color: Colors.black26,

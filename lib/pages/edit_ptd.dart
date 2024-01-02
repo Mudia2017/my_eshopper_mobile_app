@@ -570,7 +570,7 @@ class _EditProductState extends State<EditProduct> {
                                     child: Row(
                                       children: [
                                         if (imageUrl !=
-                                                "http://192.168.43.50:8000" &&
+                                                "http://Oneluvtoall.pythonanywhere.com" &&
                                             imageUrl != '')
                                           Column(
                                             children: [

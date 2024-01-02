@@ -243,7 +243,7 @@ class _AllRecentViewItemsState extends State<AllRecentViewItems> {
                               children: [
                                 if (allRecentViewList.toList()[index]
                                         ['imageURL'] !=
-                                    "http://192.168.43.50:8000")
+                                    "http://Oneluvtoall.pythonanywhere.com")
                                   Image.network(
                                     allRecentViewList.toList()[index]
                                         ['imageURL'],
@@ -252,7 +252,7 @@ class _AllRecentViewItemsState extends State<AllRecentViewItems> {
                                   ),
                                 if (allRecentViewList.toList()[index]
                                         ['imageURL'] ==
-                                    "http://192.168.43.50:8000")
+                                    "http://Oneluvtoall.pythonanywhere.com")
                                   Container(
                                     height: 120,
                                     width: 120,

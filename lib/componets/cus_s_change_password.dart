@@ -30,8 +30,10 @@ class _ChangePasswordState extends State<ChangePassword> {
       'userId': widget.userId,
     };
     var response = await http.post(
+      // Uri.parse(
+      //     'http://192.168.43.50:8000/apis/v1/homePage/api_changePassword/'),
       Uri.parse(
-          'http://192.168.43.50:8000/apis/v1/homePage/api_changePassword/'),
+          'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_changePassword/'),
       body: jsonEncode(data),
       headers: {
         "Content-Type": "application/json",

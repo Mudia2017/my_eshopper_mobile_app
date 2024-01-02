@@ -502,8 +502,10 @@ class DataProcessing extends ChangeNotifier {
     });
 
     var response = await http.post(
+      // Uri.parse(
+      //     "http://192.168.43.50:8000/apis/v1/homePage/api_updateCartData/"),
       Uri.parse(
-          "http://192.168.43.50:8000/apis/v1/homePage/api_updateCartData/"),
+          "http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_updateCartData/"),
       body: jsonEncode(data),
       headers: {
         "Content-Type": "application/json",
@@ -534,7 +536,9 @@ class DataProcessing extends ChangeNotifier {
     });
 
     var response = await http.post(
-      Uri.parse("http://192.168.43.50:8000/apis/v1/homePage/api_cartData/"),
+      // Uri.parse("http://192.168.43.50:8000/apis/v1/homePage/api_cartData/"),
+      Uri.parse(
+          "http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_cartData/"),
       body: jsonEncode(data),
       headers: {
         "Content-Type": "application/json",
@@ -572,8 +576,10 @@ class DataProcessing extends ChangeNotifier {
 
     if (token.isNotEmpty) {
       var response = await http.post(
+        // Uri.parse(
+        //     'http://192.168.43.50:8000/apis/v1/homePage/api_processOrder/'),
         Uri.parse(
-            'http://192.168.43.50:8000/apis/v1/homePage/api_processOrder/'),
+            'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_processOrder/'),
         body: jsonEncode(data),
         headers: {
           "Content-Type": "application/json",
@@ -592,8 +598,10 @@ class DataProcessing extends ChangeNotifier {
     } else {
       // ======= ITS A GUEST USER REQUEST ==========
       var response = await http.post(
+        // Uri.parse(
+        //     'http://192.168.43.50:8000/apis/v1/homePage/api_processOrder/'),
         Uri.parse(
-            'http://192.168.43.50:8000/apis/v1/homePage/api_processOrder/'),
+            'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_processOrder/'),
         body: jsonEncode(data),
         headers: {"Content-Type": "application/json"},
       );
@@ -617,8 +625,10 @@ class DataProcessing extends ChangeNotifier {
   Future guestVerifyCartItems(List ptdData) async {
     var serverResponseMsg;
     var response = await http.post(
+      // Uri.parse(
+      //     'http://192.168.43.50:8000/apis/v1/homePage/api_guestVerifyCartItems/'),
       Uri.parse(
-          'http://192.168.43.50:8000/apis/v1/homePage/api_guestVerifyCartItems/'),
+          'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_guestVerifyCartItems/'),
       body: jsonEncode(ptdData),
       headers: {
         "Content-Type": "application/json",
@@ -642,8 +652,10 @@ class DataProcessing extends ChangeNotifier {
     var isHeartFill = false;
     var data = {'wishList': wishListType, 'ptdId': ptdId};
     var response = await http.post(
+      // Uri.parse(
+      //     'http://192.168.43.50:8000/apis/v1/homePage/api_get_PtdDetail_SameCategoryPtd/'),
       Uri.parse(
-          'http://192.168.43.50:8000/apis/v1/homePage/api_get_PtdDetail_SameCategoryPtd/'),
+          'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_get_PtdDetail_SameCategoryPtd/'),
       body: jsonEncode(data),
       headers: {
         "Content-Type": "application/json",
@@ -697,8 +709,10 @@ class DataProcessing extends ChangeNotifier {
     };
 
     var response = await http.post(
+      // Uri.parse(
+      //     'http://192.168.43.50:8000/apis/v1/homePage/api_adminEditOrder/'),
       Uri.parse(
-          'http://192.168.43.50:8000/apis/v1/homePage/api_adminEditOrder/'),
+          'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_adminEditOrder/'),
       body: jsonEncode(data),
       headers: {
         "Content-Type": "application/json",
@@ -748,8 +762,10 @@ class DataProcessing extends ChangeNotifier {
     };
 
     var response = await http.post(
+      // Uri.parse(
+      //     'http://192.168.43.50:8000/apis/v1/homePage/api_adminProcessRefundOrder/'),
       Uri.parse(
-          'http://192.168.43.50:8000/apis/v1/homePage/api_adminProcessRefundOrder/'),
+          'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_adminProcessRefundOrder/'),
       body: jsonEncode(data),
       headers: {
         "Content-Type": "application/json",
@@ -810,8 +826,10 @@ class DataProcessing extends ChangeNotifier {
       'ptdReviewId': ptdReviewId,
     };
     var response = await http.post(
+      // Uri.parse(
+      //     'http://192.168.43.50:8000/apis/v1/homePage/api_writePtdReview/'),
       Uri.parse(
-          'http://192.168.43.50:8000/apis/v1/homePage/api_writePtdReview/'),
+          'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_writePtdReview/'),
       body: jsonEncode(data),
       headers: {
         "Content-Type": "application/json",
@@ -857,7 +875,9 @@ class DataProcessing extends ChangeNotifier {
     };
 
     var response = await http.post(
-      Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_wishList/'),
+      // Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_wishList/'),
+      Uri.parse(
+          'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_wishList/'),
       body: jsonEncode(data),
       headers: {
         "Content-Type": "application/json",
@@ -895,7 +915,9 @@ class DataProcessing extends ChangeNotifier {
       'action': action,
     };
     var response = await http.post(
-      Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_traderStore/'),
+      // Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_traderStore/'),
+      Uri.parse(
+          'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_traderStore/'),
       body: jsonEncode(data),
       headers: {
         "Content-Type": "application/json",
@@ -936,8 +958,10 @@ class DataProcessing extends ChangeNotifier {
     };
 
     var response = await http.post(
+      // Uri.parse(
+      //     'http://192.168.43.50:8000/apis/v1/homePage/api_productOverView/'),
       Uri.parse(
-          'http://192.168.43.50:8000/apis/v1/homePage/api_productOverView/'),
+          'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_productOverView/'),
       body: jsonEncode(data),
       headers: {
         "Content-Type": "application/json",
@@ -979,7 +1003,9 @@ class DataProcessing extends ChangeNotifier {
       'editPrdRcd': editPtdRcd
     };
     var response = await http.post(
-      Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_editProduct/'),
+      // Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_editProduct/'),
+      Uri.parse(
+          'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_editProduct/'),
       body: jsonEncode(data),
       headers: {
         "Content-Type": "application/json",
@@ -1030,7 +1056,9 @@ class DataProcessing extends ChangeNotifier {
     var serverRes = '';
     var request = http.MultipartRequest(
       'POST',
-      Uri.parse("http://192.168.43.50:8000/apis/v1/homePage/api_editProduct/"),
+      // Uri.parse("http://192.168.43.50:8000/apis/v1/homePage/api_editProduct/"),
+      Uri.parse(
+          "http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_editProduct/"),
     );
     Map<String, String> headers = {
       "Authorization": "Token $token",
@@ -1108,7 +1136,9 @@ class DataProcessing extends ChangeNotifier {
 
     var request = http.MultipartRequest(
       'POST',
-      Uri.parse("http://192.168.43.50:8000/apis/v1/homePage/api_addProduct/"),
+      // Uri.parse("http://192.168.43.50:8000/apis/v1/homePage/api_addProduct/"),
+      Uri.parse(
+          "http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_addProduct/"),
     );
     Map<String, String> headers = {
       "Authorization": "Token $token",
@@ -1171,8 +1201,10 @@ class DataProcessing extends ChangeNotifier {
       'addressRecord': addressRecord,
     };
     var response = await http.post(
+      // Uri.parse(
+      //     'http://192.168.43.50:8000/apis/v1/homePage/api_updateCustomerAddress/'),
       Uri.parse(
-          'http://192.168.43.50:8000/apis/v1/homePage/api_updateCustomerAddress/'),
+          'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_updateCustomerAddress/'),
       body: jsonEncode(data),
       headers: {
         "Content-Type": "application/json",
@@ -1210,7 +1242,9 @@ class DataProcessing extends ChangeNotifier {
       'value': value,
     };
     var response = await http.post(
-      Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_adminSetting/'),
+      // Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_adminSetting/'),
+      Uri.parse(
+          'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_adminSetting/'),
       body: jsonEncode(data),
       headers: {
         "Content-Type": "application/json",
@@ -1245,8 +1279,10 @@ class DataProcessing extends ChangeNotifier {
       'call': call,
     };
     var response = await http.post(
+      // Uri.parse(
+      //     'http://192.168.43.50:8000/apis/v1/homePage/api_ptdCategoryBrand/'),
       Uri.parse(
-          'http://192.168.43.50:8000/apis/v1/homePage/api_ptdCategoryBrand/'),
+          'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_ptdCategoryBrand/'),
       body: jsonEncode(data),
       headers: {
         "Content-Type": "application/json",
@@ -1281,7 +1317,9 @@ class DataProcessing extends ChangeNotifier {
     };
     var serverResponseMsg;
     var response = await http.post(
-      Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_cartData/'),
+      // Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_cartData/'),
+      Uri.parse(
+          'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_cartData/'),
       body: jsonEncode(data),
       headers: {
         "Content-Type": "application/json",
@@ -1310,8 +1348,10 @@ class DataProcessing extends ChangeNotifier {
     var response;
     Map data = {'call': call};
     response = await http.post(
+      // Uri.parse(
+      //     "http://192.168.43.50:8000/apis/v1/homePage/api_allRecentView/"),
       Uri.parse(
-          "http://192.168.43.50:8000/apis/v1/homePage/api_allRecentView/"),
+          "http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_allRecentView/"),
       body: json.encode(data),
       headers: {
         "Content-Type": "application/json",
@@ -1342,8 +1382,10 @@ class DataProcessing extends ChangeNotifier {
     var response;
     Map data = {'storeId': storeId};
     response = await http.post(
+      // Uri.parse(
+      //     "http://192.168.43.50:8000/apis/v1/homePage/api_allSellerItems/"),
       Uri.parse(
-          "http://192.168.43.50:8000/apis/v1/homePage/api_allSellerItems/"),
+          "http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_allSellerItems/"),
       body: json.encode(data),
       headers: {
         "Content-Type": "application/json",

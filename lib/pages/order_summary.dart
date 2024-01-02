@@ -41,7 +41,9 @@ class _CustomerOrderSummaryState extends State<CustomerOrderSummary> {
     };
 
     var response = await http.post(
-      Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_cartData/'),
+      // Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_cartData/'),
+      Uri.parse(
+          'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_cartData/'),
       body: jsonEncode(data),
       headers: {
         "Content-type": "application/json",
@@ -217,9 +219,9 @@ class _CustomerOrderSummaryState extends State<CustomerOrderSummary> {
                   width: 50,
                   child: Column(
                     children: [
-                      if (image != "http://192.168.43.50:8000")
+                      if (image != "http://Oneluvtoall.pythonanywhere.com")
                         Flexible(child: Image.network(image)),
-                      if (image == "http://192.168.43.50:8000")
+                      if (image == "http://Oneluvtoall.pythonanywhere.com")
                         const Icon(
                           Icons.photo_size_select_actual_sharp,
                           color: Colors.black26,

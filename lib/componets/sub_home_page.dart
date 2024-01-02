@@ -92,14 +92,14 @@ class RecentlyViewTemplateDesign extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    if (productImage != "http://192.168.43.50:8000")
+                    if (productImage != "http://Oneluvtoall.pythonanywhere.com")
                       Flexible(
                         child: Image.network(
                           productImage,
                           fit: BoxFit.scaleDown,
                         ),
                       ),
-                    if (productImage == "http://192.168.43.50:8000")
+                    if (productImage == "http://Oneluvtoall.pythonanywhere.com")
                       const Icon(
                         Icons.photo_size_select_actual_sharp,
                         color: Colors.black26,
@@ -237,7 +237,7 @@ class DailyCatTemplateDesign extends StatelessWidget {
                 width: 5,
                 height: 5,
               ),
-              if (image != 'http://192.168.43.50:8000')
+              if (image != 'http://Oneluvtoall.pythonanywhere.com')
                 CircleAvatar(
                   backgroundColor: Colors.transparent,
                   radius: 60.0,
@@ -246,7 +246,7 @@ class DailyCatTemplateDesign extends StatelessWidget {
                     fit: BoxFit.contain,
                   ),
                 ),
-              if (image == 'http://192.168.43.50:8000')
+              if (image == 'http://Oneluvtoall.pythonanywhere.com')
                 const CircleAvatar(
                   radius: 60.0,
                   child: Icon(Icons.photo_size_select_actual_sharp),

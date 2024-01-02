@@ -42,7 +42,9 @@ class _SettingsState extends State<Settings> {
   getDefaultShipAddress() async {
     var data = {'call': 'defaultShipAddress'};
     var response = await http.post(
-      Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_settings/'),
+      // Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_settings/'),
+      Uri.parse(
+          'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_settings/'),
       body: jsonEncode(data),
       headers: {
         "Content-Type": "application/json",

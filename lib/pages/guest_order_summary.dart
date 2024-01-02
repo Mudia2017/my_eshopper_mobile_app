@@ -198,9 +198,9 @@ class _GuestOrderSummaryState extends State<GuestOrderSummary> {
                   width: 50,
                   child: Column(
                     children: [
-                      if (image != "http://192.168.43.50:8000")
+                      if (image != "http://Oneluvtoall.pythonanywhere.com")
                         Flexible(child: Image.network(image)),
-                      if (image == "http://192.168.43.50:8000")
+                      if (image == "http://Oneluvtoall.pythonanywhere.com")
                         const Icon(
                           Icons.photo_size_select_actual_sharp,
                           color: Colors.black26,

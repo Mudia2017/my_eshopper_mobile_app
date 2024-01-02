@@ -58,7 +58,9 @@ class _AuthenticCartPageState extends State<AuthenticCartPage> {
     });
 
     var response = await http.post(
-      Uri.parse("http://192.168.43.50:8000/apis/v1/homePage/api_cartData/"),
+      // Uri.parse("http://192.168.43.50:8000/apis/v1/homePage/api_cartData/"),
+      Uri.parse(
+          "http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_cartData/"),
       body: jsonEncode(data),
       headers: {
         "Content-Type": "application/json",

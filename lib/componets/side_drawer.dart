@@ -98,9 +98,11 @@ class _SideDrawerState extends State<SideDrawer> {
 
     var response = await http.post(
       // Uri.parse('http://192.168.1.36:8000/apis/v1/homePage/api_logout/'),
-      Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_logout/'),
+      // Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_logout/'),
       // Uri.parse("http://127.0.0.1:8000/apis/v1/homePage/api_logout/"),
       // Uri.parse('http://172.20.10.5:8000/apis/v1/homePage/api_logout/'),
+      Uri.parse(
+          'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_logout/'),
     );
 
     if (response.statusCode == 200) {

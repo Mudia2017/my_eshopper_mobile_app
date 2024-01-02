@@ -130,7 +130,9 @@ class _MyHomePageState extends State<MyHomePage> {
     try {
       if (userToken != '') {
         response = await http.post(
-          Uri.parse("http://192.168.43.50:8000/apis/v1/homePage/api_homePage/"),
+          // Uri.parse("http://192.168.43.50:8000/apis/v1/homePage/api_homePage/"),
+          Uri.parse(
+              "http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_homePage/"),
           body: json.encode(data),
           headers: {
             "Content-Type": "application/json",
@@ -157,7 +159,9 @@ class _MyHomePageState extends State<MyHomePage> {
         }
       } else {
         response = await http.post(
-          Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_homePage/'),
+          // Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_homePage/'),
+          Uri.parse(
+              'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_homePage/'),
         );
 
         print(response);

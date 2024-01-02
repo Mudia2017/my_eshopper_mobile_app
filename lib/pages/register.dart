@@ -33,7 +33,9 @@ class _RegisterState extends State<Register> {
     var response = await http.post(
         // Uri.parse('http://192.168.1.36:8000/apis/v1/homePage/api_register/'),
         // Uri.parse("http://127.0.0.1:8000/apis/v1/homePage/api_register/"),
-        Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_register/'),
+        // Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_register/'),
+        Uri.parse(
+            'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_register/'),
         body: json.encode(data),
         headers: {"Content-Type": "application/json"},
         encoding: Encoding.getByName("utf-8"));

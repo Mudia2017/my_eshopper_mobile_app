@@ -298,7 +298,7 @@ class _MyWishListState extends State<MyWishList> {
                                             ),
                                             if (myWishListItems.toList()[index]
                                                     ['ptdImage'] !=
-                                                "http://192.168.43.50:8000")
+                                                "http://Oneluvtoall.pythonanywhere.com")
                                               InkWell(
                                                 onTap: () {
                                                   Navigator.of(context)
@@ -353,7 +353,7 @@ class _MyWishListState extends State<MyWishList> {
                                               ),
                                             if (myWishListItems.toList()[index]
                                                     ['ptdImage'] ==
-                                                "http://192.168.43.50:8000")
+                                                "http://Oneluvtoall.pythonanywhere.com")
                                               InkWell(
                                                 onTap: () {
                                                   Navigator.of(context)
@@ -865,7 +865,7 @@ class _MyWishListState extends State<MyWishList> {
                                                 if (sameCategoryPtdData
                                                                 .toList()[index]
                                                             ['imageURL'] !=
-                                                        "http://192.168.43.50:8000" &&
+                                                        "http://Oneluvtoall.pythonanywhere.com" &&
                                                     sameCategoryPtdData
                                                                 .toList()[index]
                                                             ['imageURL'] !=

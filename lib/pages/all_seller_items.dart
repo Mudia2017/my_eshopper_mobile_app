@@ -293,7 +293,7 @@ class _AllSellerItemsState extends State<AllSellerItems> {
                                         // if ("${filteredProduct[index]["imageURL"]}"
                                         //     .contains('images'))
                                         if ("${filteredStoreItems[index]["imageURL"]}" ==
-                                            "http://192.168.43.50:8000")
+                                            "http://Oneluvtoall.pythonanywhere.com")
                                           Container(
                                             height: 120,
                                             width: 120,
@@ -305,7 +305,7 @@ class _AllSellerItemsState extends State<AllSellerItems> {
                                             ),
                                           ),
                                         if ("${filteredStoreItems[index]["imageURL"]}" !=
-                                            "http://192.168.43.50:8000")
+                                            "http://Oneluvtoall.pythonanywhere.com")
                                           Container(
                                             height: 120,
                                             width: 120,

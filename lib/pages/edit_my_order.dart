@@ -35,8 +35,10 @@ class _EditMyOrderState extends State<EditMyOrder> {
       'updateShippingInfo': updateShippingInfo,
     };
     var response = await http.post(
+      // Uri.parse(
+      //     'http://192.168.43.50:8000/apis/v1/homePage/api_updateMyOrder/'),
       Uri.parse(
-          'http://192.168.43.50:8000/apis/v1/homePage/api_updateMyOrder/'),
+          'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_updateMyOrder/'),
       body: jsonEncode(data),
       headers: {
         "Content-Type": "application/json",
@@ -1159,12 +1161,12 @@ class _EditMyOrderState extends State<EditMyOrder> {
             children: [
               TableRow(
                 children: [
-                  if (image != "http://192.168.43.50:8000")
+                  if (image != "http://Oneluvtoall.pythonanywhere.com")
                     Image.network(
                       image,
                       fit: BoxFit.cover,
                     ),
-                  if (image == "http://192.168.43.50:8000")
+                  if (image == "http://Oneluvtoall.pythonanywhere.com")
                     const Icon(
                       Icons.photo_size_select_actual_sharp,
                       color: Colors.black26,

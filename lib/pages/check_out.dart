@@ -46,8 +46,10 @@ class _CustomerCheckOutState extends State<CustomerCheckOut> {
     Map data = {"name": cusName};
 
     var response = await http.post(
+        // Uri.parse(
+        //     'http://192.168.43.50:8000/apis/v1/homePage/api_getShippingAdd/'),
         Uri.parse(
-            'http://192.168.43.50:8000/apis/v1/homePage/api_getShippingAdd/'),
+            'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_getShippingAdd/'),
         body: json.encode(data),
         headers: {
           "Content-Type": "application/json",

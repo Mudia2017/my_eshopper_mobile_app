@@ -78,7 +78,9 @@ class _MarketPlaceState extends State<MarketPlace> {
     // THE SERVER.
     if (widget.token != '') {
       var response = await http.post(
-        Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_eshop/'),
+        // Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_eshop/'),
+        Uri.parse(
+            'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_eshop/'),
         body: jsonEncode(data),
         headers: {
           "Content-Type": "application/json",
@@ -105,7 +107,9 @@ class _MarketPlaceState extends State<MarketPlace> {
       }
     } else {
       var response = await http.post(
-        Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_eshop/'),
+        // Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_eshop/'),
+        Uri.parse(
+            'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_eshop/'),
       );
 
       try {
@@ -461,7 +465,7 @@ class _MarketPlaceState extends State<MarketPlace> {
                                   // if ("${filteredProduct[index]["imageURL"]}"
                                   //     .contains('images'))
                                   if ("${filteredProduct[index]["imageURL"]}" ==
-                                      "http://192.168.43.50:8000")
+                                      "http://Oneluvtoall.pythonanywhere.com")
                                     Container(
                                       height: 120,
                                       width: 120,
@@ -472,7 +476,7 @@ class _MarketPlaceState extends State<MarketPlace> {
                                       ),
                                     ),
                                   if ("${filteredProduct[index]["imageURL"]}" !=
-                                      "http://192.168.43.50:8000")
+                                      "http://Oneluvtoall.pythonanywhere.com")
                                     Container(
                                       height: 120,
                                       width: 120,
