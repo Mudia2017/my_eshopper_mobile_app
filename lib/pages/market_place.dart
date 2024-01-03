@@ -79,6 +79,8 @@ class _MarketPlaceState extends State<MarketPlace> {
     if (widget.token != '') {
       var response = await http.post(
         // Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_eshop/'),
+        // Uri.parse('http://192.168.100.88:8000/apis/v1/homePage/api_eshop/'),
+        // Uri.parse('http://127.0.0.1:8000/apis/v1/homePage/api_eshop/'),
         Uri.parse(
             'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_eshop/'),
         body: jsonEncode(data),
