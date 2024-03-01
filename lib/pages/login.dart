@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:eshopper_mobile_app/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
@@ -29,8 +30,7 @@ class _LoginState extends State<Login> {
         // Uri.parse('http://192.168.1.36:8000/apis/v1/homePage/api_login/'),
         // Uri.parse('http://127.0.0.1:8000/apis/v1/homePage/api_login/'),
         // Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_login/'),
-        Uri.parse(
-            'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_login/'),
+        Uri.parse('${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_login/'),
         body: json.encode(data),
         headers: {"Content-Type": "application/json"},
         encoding: Encoding.getByName("utf-8"));

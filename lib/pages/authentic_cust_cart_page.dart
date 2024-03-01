@@ -7,6 +7,7 @@ import 'package:eshopper_mobile_app/componets/data_computation.dart';
 import 'package:eshopper_mobile_app/componets/authentic_sub_cart_page.dart';
 import 'package:eshopper_mobile_app/routes/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:http/http.dart' as http;
@@ -58,9 +59,8 @@ class _AuthenticCartPageState extends State<AuthenticCartPage> {
     });
 
     var response = await http.post(
-      // Uri.parse("http://192.168.43.50:8000/apis/v1/homePage/api_cartData/"),
-      Uri.parse(
-          "http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_cartData/"),
+      // Uri.parse("${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_cartData/"),
+      Uri.parse("${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_cartData/"),
       body: jsonEncode(data),
       headers: {
         "Content-Type": "application/json",

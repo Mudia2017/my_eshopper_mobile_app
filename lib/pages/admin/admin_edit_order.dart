@@ -4,6 +4,7 @@ import 'package:eshopper_mobile_app/componets/data_computation.dart';
 import 'package:eshopper_mobile_app/componets/pdf_invoice_slip.dart';
 import 'package:eshopper_mobile_app/routes/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
@@ -40,7 +41,7 @@ class _AdminUpdateOrderState extends State<AdminUpdateOrder> {
       // Uri.parse(
       //     'http://192.168.43.50:8000/apis/v1/homePage/api_adminEditOrder/'),
       Uri.parse(
-          'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_adminEditOrder/'),
+          '${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_adminEditOrder/'),
       body: jsonEncode(data),
       headers: {
         "Content-Type": "application/json",
@@ -1535,12 +1536,12 @@ class _AdminUpdateOrderState extends State<AdminUpdateOrder> {
             children: [
               TableRow(
                 children: [
-                  if (image != "http://Oneluvtoall.pythonanywhere.com")
+                  if (image != "${dotenv.env['URL_ENDPOINT']}")
                     Image.network(
                       image,
                       fit: BoxFit.cover,
                     ),
-                  if (image == "http://Oneluvtoall.pythonanywhere.com")
+                  if (image == "${dotenv.env['URL_ENDPOINT']}")
                     const Icon(
                       Icons.photo_size_select_actual_sharp,
                       color: Colors.black26,

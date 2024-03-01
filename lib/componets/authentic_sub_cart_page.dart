@@ -5,6 +5,7 @@ import 'package:eshopper_mobile_app/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:number_display/number_display.dart';
 import 'package:provider/provider.dart';
@@ -81,13 +82,13 @@ class _CartPageMainLayOutState extends State<CartPageMainLayOut> {
                 width: 60,
                 child: Column(
                   children: [
-                    if (widget.image != "http://Oneluvtoall.pythonanywhere.com")
+                    if (widget.image != "${dotenv.env['URL_ENDPOINT']}")
                       Flexible(
                           child: Image.network(
                         widget.image,
                         fit: BoxFit.contain,
                       )),
-                    if (widget.image == "http://Oneluvtoall.pythonanywhere.com")
+                    if (widget.image == "${dotenv.env['URL_ENDPOINT']}")
                       const Icon(
                         Icons.photo_size_select_actual_sharp,
                         color: Colors.black26,
@@ -339,14 +340,14 @@ class WishListProduct extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    if (productImage != "http://Oneluvtoall.pythonanywhere.com")
+                    if (productImage != "${dotenv.env['URL_ENDPOINT']}")
                       Expanded(
                         child: Image.network(
                           productImage,
                           fit: BoxFit.contain,
                         ),
                       ),
-                    if (productImage == "http://Oneluvtoall.pythonanywhere.com")
+                    if (productImage == "${dotenv.env['URL_ENDPOINT']}")
                       const Icon(
                         Icons.photo_size_select_actual_sharp,
                         color: Colors.black26,
@@ -613,7 +614,7 @@ class WishListProduct extends StatelessWidget {
                                                 if (sameCategoryPtdData
                                                                 .toList()[index]
                                                             ['imageURL'] !=
-                                                        "http://Oneluvtoall.pythonanywhere.com" &&
+                                                        "${dotenv.env['URL_ENDPOINT']}" &&
                                                     sameCategoryPtdData
                                                                 .toList()[index]
                                                             ['imageURL'] !=
@@ -1058,13 +1059,11 @@ class RecentViewedProduct extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    if (productImage !=
-                            "http://Oneluvtoall.pythonanywhere.com" &&
+                    if (productImage != "${dotenv.env['URL_ENDPOINT']}" &&
                         productImage != '')
                       Expanded(
                         child: Image.network(
-                          "http://Oneluvtoall.pythonanywhere.com" +
-                              productImage,
+                          "${dotenv.env['URL_ENDPOINT']}" + productImage,
                           fit: BoxFit.contain,
                         ),
                       ),

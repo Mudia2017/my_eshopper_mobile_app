@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -120,14 +121,14 @@ class CategorySingleProduct extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    if (productImage != "http://Oneluvtoall.pythonanywhere.com")
+                    if (productImage != "${dotenv.env['URL_ENDPOINT']}")
                       Flexible(
                         child: Image.network(
                           productImage,
                           fit: BoxFit.scaleDown,
                         ),
                       ),
-                    if (productImage == "http://Oneluvtoall.pythonanywhere.com")
+                    if (productImage == "${dotenv.env['URL_ENDPOINT']}")
                       const Icon(
                         Icons.photo_size_select_actual_sharp,
                         color: Colors.black26,

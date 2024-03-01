@@ -46,7 +46,7 @@ dependencies:
   pdf: ^3.7.4
   # open_document: ^1.0.4   # WORKED ON IOS
   open_file: ^3.2.1
-
+  flutter_dotenv: ^5.1.0
   # format date time
   intl: ^0.17.0
 
@@ -89,6 +89,7 @@ flutter:
     - images/empty_cart.png
     - images/caution sign.png
     - images/launch_icon.png
+    - .env
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

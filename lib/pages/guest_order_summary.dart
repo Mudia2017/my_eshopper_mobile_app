@@ -1,6 +1,7 @@
 import 'package:eshopper_mobile_app/componets/data_computation.dart';
 import 'package:eshopper_mobile_app/routes/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
@@ -198,9 +199,9 @@ class _GuestOrderSummaryState extends State<GuestOrderSummary> {
                   width: 50,
                   child: Column(
                     children: [
-                      if (image != "http://Oneluvtoall.pythonanywhere.com")
+                      if (image != "${dotenv.env['URL_ENDPOINT']}")
                         Flexible(child: Image.network(image)),
-                      if (image == "http://Oneluvtoall.pythonanywhere.com")
+                      if (image == "${dotenv.env['URL_ENDPOINT']}")
                         const Icon(
                           Icons.photo_size_select_actual_sharp,
                           color: Colors.black26,

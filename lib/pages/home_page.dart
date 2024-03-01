@@ -10,6 +10,7 @@ import 'package:eshopper_mobile_app/componets/sub_home_page.dart';
 import 'package:eshopper_mobile_app/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -130,9 +131,9 @@ class _MyHomePageState extends State<MyHomePage> {
     try {
       if (userToken != '') {
         response = await http.post(
-          // Uri.parse("http://192.168.43.50:8000/apis/v1/homePage/api_homePage/"),
+          // Uri.parse("${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_homePage/"),
           Uri.parse(
-              "http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_homePage/"),
+              "${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_homePage/"),
           body: json.encode(data),
           headers: {
             "Content-Type": "application/json",
@@ -159,9 +160,9 @@ class _MyHomePageState extends State<MyHomePage> {
         }
       } else {
         response = await http.post(
-          // Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_homePage/'),
+          // Uri.parse('${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_homePage/'),
           Uri.parse(
-              'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_homePage/'),
+              '${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_homePage/'),
         );
 
         print(response);

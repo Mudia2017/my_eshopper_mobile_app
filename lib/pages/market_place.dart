@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 import 'package:number_display/number_display.dart';
 import 'package:badges/badges.dart';
@@ -81,8 +82,7 @@ class _MarketPlaceState extends State<MarketPlace> {
         // Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_eshop/'),
         // Uri.parse('http://192.168.100.88:8000/apis/v1/homePage/api_eshop/'),
         // Uri.parse('http://127.0.0.1:8000/apis/v1/homePage/api_eshop/'),
-        Uri.parse(
-            'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_eshop/'),
+        Uri.parse('${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_eshop/'),
         body: jsonEncode(data),
         headers: {
           "Content-Type": "application/json",
@@ -110,8 +110,7 @@ class _MarketPlaceState extends State<MarketPlace> {
     } else {
       var response = await http.post(
         // Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_eshop/'),
-        Uri.parse(
-            'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_eshop/'),
+        Uri.parse('${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_eshop/'),
       );
 
       try {
@@ -467,7 +466,7 @@ class _MarketPlaceState extends State<MarketPlace> {
                                   // if ("${filteredProduct[index]["imageURL"]}"
                                   //     .contains('images'))
                                   if ("${filteredProduct[index]["imageURL"]}" ==
-                                      "http://Oneluvtoall.pythonanywhere.com")
+                                      "${dotenv.env['URL_ENDPOINT']}")
                                     Container(
                                       height: 120,
                                       width: 120,
@@ -478,7 +477,7 @@ class _MarketPlaceState extends State<MarketPlace> {
                                       ),
                                     ),
                                   if ("${filteredProduct[index]["imageURL"]}" !=
-                                      "http://Oneluvtoall.pythonanywhere.com")
+                                      "${dotenv.env['URL_ENDPOINT']}")
                                     Container(
                                       height: 120,
                                       width: 120,

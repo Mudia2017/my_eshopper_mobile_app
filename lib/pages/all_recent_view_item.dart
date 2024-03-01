@@ -2,6 +2,7 @@ import 'package:badges/badges.dart';
 import 'package:eshopper_mobile_app/componets/data_computation.dart';
 import 'package:eshopper_mobile_app/routes/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
@@ -243,7 +244,7 @@ class _AllRecentViewItemsState extends State<AllRecentViewItems> {
                               children: [
                                 if (allRecentViewList.toList()[index]
                                         ['imageURL'] !=
-                                    "http://Oneluvtoall.pythonanywhere.com")
+                                    "${dotenv.env['URL_ENDPOINT']}")
                                   Image.network(
                                     allRecentViewList.toList()[index]
                                         ['imageURL'],
@@ -252,7 +253,7 @@ class _AllRecentViewItemsState extends State<AllRecentViewItems> {
                                   ),
                                 if (allRecentViewList.toList()[index]
                                         ['imageURL'] ==
-                                    "http://Oneluvtoall.pythonanywhere.com")
+                                    "${dotenv.env['URL_ENDPOINT']}")
                                   Container(
                                     height: 120,
                                     width: 120,

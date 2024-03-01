@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:provider/provider.dart';
 import 'package:http/http.dart' as http;
 import 'package:google_fonts/google_fonts.dart';
@@ -62,7 +63,7 @@ class _ProductDetailState extends State<ProductDetail> {
         // Uri.parse(
         //     "http://192.168.43.50:8000/apis/v1/homePage/api_get_PtdDetail_SameCategoryPtd/"),
         Uri.parse(
-            "http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_get_PtdDetail_SameCategoryPtd/"),
+            "${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_get_PtdDetail_SameCategoryPtd/"),
         body: json.encode(data),
         headers: {
           "Content-Type": "application/json",
@@ -74,7 +75,7 @@ class _ProductDetailState extends State<ProductDetail> {
         // Uri.parse(
         //     "http://192.168.43.50:8000/apis/v1/homePage/api_get_PtdDetail_SameCategoryPtd/"),
         Uri.parse(
-            "http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_get_PtdDetail_SameCategoryPtd/"),
+            "${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_get_PtdDetail_SameCategoryPtd/"),
         body: json.encode(data),
         headers: {
           "Content-Type": "application/json",
@@ -319,7 +320,7 @@ class _ProductDetailState extends State<ProductDetail> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               if ('${ptdDetailRecord['imageURL']}' !=
-                                  "http://Oneluvtoall.pythonanywhere.com")
+                                  "${dotenv.env['URL_ENDPOINT']}")
                                 Flexible(
                                   child: Image.network(
                                     '${ptdDetailRecord['imageURL']}',
@@ -327,7 +328,7 @@ class _ProductDetailState extends State<ProductDetail> {
                                   ),
                                 ),
                               if ('${ptdDetailRecord['imageURL']}' ==
-                                  "http://Oneluvtoall.pythonanywhere.com")
+                                  "${dotenv.env['URL_ENDPOINT']}")
                                 const Flexible(
                                   child: Icon(
                                     Icons.photo_size_select_actual_sharp,

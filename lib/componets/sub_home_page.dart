@@ -1,5 +1,6 @@
 import 'package:eshopper_mobile_app/routes/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
@@ -92,14 +93,14 @@ class RecentlyViewTemplateDesign extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    if (productImage != "http://Oneluvtoall.pythonanywhere.com")
+                    if (productImage != "${dotenv.env['URL_ENDPOINT']}")
                       Flexible(
                         child: Image.network(
                           productImage,
                           fit: BoxFit.scaleDown,
                         ),
                       ),
-                    if (productImage == "http://Oneluvtoall.pythonanywhere.com")
+                    if (productImage == "${dotenv.env['URL_ENDPOINT']}")
                       const Icon(
                         Icons.photo_size_select_actual_sharp,
                         color: Colors.black26,
@@ -237,7 +238,7 @@ class DailyCatTemplateDesign extends StatelessWidget {
                 width: 5,
                 height: 5,
               ),
-              if (image != 'http://Oneluvtoall.pythonanywhere.com')
+              if (image != '${dotenv.env['URL_ENDPOINT']}')
                 CircleAvatar(
                   backgroundColor: Colors.transparent,
                   radius: 60.0,
@@ -246,7 +247,7 @@ class DailyCatTemplateDesign extends StatelessWidget {
                     fit: BoxFit.contain,
                   ),
                 ),
-              if (image == 'http://Oneluvtoall.pythonanywhere.com')
+              if (image == '${dotenv.env['URL_ENDPOINT']}')
                 const CircleAvatar(
                   radius: 60.0,
                   child: Icon(Icons.photo_size_select_actual_sharp),

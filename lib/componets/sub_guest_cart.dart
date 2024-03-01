@@ -1,6 +1,7 @@
 import 'package:badges/badges.dart';
 import 'package:eshopper_mobile_app/componets/data_computation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
@@ -48,9 +49,9 @@ class _SubGuestCartPtdState extends State<SubGuestCartPtd> {
             ListTile(
               leading: Column(
                 children: [
-                  if (widget.image != "http://Oneluvtoall.pythonanywhere.com")
+                  if (widget.image != "${dotenv.env['URL_ENDPOINT']}")
                     Flexible(child: Image.network(widget.image)),
-                  if (widget.image == "http://Oneluvtoall.pythonanywhere.com")
+                  if (widget.image == "${dotenv.env['URL_ENDPOINT']}")
                     const Icon(
                       Icons.photo_size_select_actual_sharp,
                       color: Colors.black26,

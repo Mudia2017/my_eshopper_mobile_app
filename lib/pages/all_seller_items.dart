@@ -2,6 +2,7 @@ import 'package:badges/badges.dart';
 import 'package:eshopper_mobile_app/componets/data_computation.dart';
 import 'package:eshopper_mobile_app/routes/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
@@ -293,7 +294,7 @@ class _AllSellerItemsState extends State<AllSellerItems> {
                                         // if ("${filteredProduct[index]["imageURL"]}"
                                         //     .contains('images'))
                                         if ("${filteredStoreItems[index]["imageURL"]}" ==
-                                            "http://Oneluvtoall.pythonanywhere.com")
+                                            "${dotenv.env['URL_ENDPOINT']}")
                                           Container(
                                             height: 120,
                                             width: 120,
@@ -305,7 +306,7 @@ class _AllSellerItemsState extends State<AllSellerItems> {
                                             ),
                                           ),
                                         if ("${filteredStoreItems[index]["imageURL"]}" !=
-                                            "http://Oneluvtoall.pythonanywhere.com")
+                                            "${dotenv.env['URL_ENDPOINT']}")
                                           Container(
                                             height: 120,
                                             width: 120,

@@ -6,6 +6,7 @@ import 'package:eshopper_mobile_app/routes/routes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'package:image_picker/image_picker.dart';
@@ -570,7 +571,7 @@ class _EditProductState extends State<EditProduct> {
                                     child: Row(
                                       children: [
                                         if (imageUrl !=
-                                                "http://Oneluvtoall.pythonanywhere.com" &&
+                                                "${dotenv.env['URL_ENDPOINT']}" &&
                                             imageUrl != '')
                                           Column(
                                             children: [

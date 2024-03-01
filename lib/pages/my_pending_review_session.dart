@@ -5,6 +5,7 @@ import 'package:eshopper_mobile_app/componets/side_drawer.dart';
 import 'package:eshopper_mobile_app/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
@@ -35,7 +36,7 @@ class _MyPtdReviewSessionState extends State<MyPtdReviewSession> {
       // Uri.parse(
       //     'http://192.168.43.50:8000/apis/v1/homePage/api_pendingReview/'),
       Uri.parse(
-          'http://Oneluvtoall.pythonanywhere.com/apis/v1/homePage/api_pendingReview/'),
+          '${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_pendingReview/'),
       body: jsonEncode(data),
       headers: {
         "Content-Type": "application/json",
