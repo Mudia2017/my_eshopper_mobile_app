@@ -36,8 +36,6 @@ class _EditMyOrderState extends State<EditMyOrder> {
       'updateShippingInfo': updateShippingInfo,
     };
     var response = await http.post(
-      // Uri.parse(
-      //     'http://192.168.43.50:8000/apis/v1/homePage/api_updateMyOrder/'),
       Uri.parse(
           '${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_updateMyOrder/'),
       body: jsonEncode(data),

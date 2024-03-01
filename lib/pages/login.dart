@@ -27,9 +27,6 @@ class _LoginState extends State<Login> {
     var jsonResponse;
 
     var response = await http.post(
-        // Uri.parse('http://192.168.1.36:8000/apis/v1/homePage/api_login/'),
-        // Uri.parse('http://127.0.0.1:8000/apis/v1/homePage/api_login/'),
-        // Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_login/'),
         Uri.parse('${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_login/'),
         body: json.encode(data),
         headers: {"Content-Type": "application/json"},

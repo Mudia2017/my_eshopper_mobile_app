@@ -60,8 +60,6 @@ class _ProductDetailState extends State<ProductDetail> {
     };
     if (token != '' && token != null) {
       response = await http.post(
-        // Uri.parse(
-        //     "http://192.168.43.50:8000/apis/v1/homePage/api_get_PtdDetail_SameCategoryPtd/"),
         Uri.parse(
             "${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_get_PtdDetail_SameCategoryPtd/"),
         body: json.encode(data),
@@ -72,8 +70,6 @@ class _ProductDetailState extends State<ProductDetail> {
       );
     } else {
       response = await http.post(
-        // Uri.parse(
-        //     "http://192.168.43.50:8000/apis/v1/homePage/api_get_PtdDetail_SameCategoryPtd/"),
         Uri.parse(
             "${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_get_PtdDetail_SameCategoryPtd/"),
         body: json.encode(data),

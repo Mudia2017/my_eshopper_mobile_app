@@ -31,8 +31,6 @@ class _ChangePasswordState extends State<ChangePassword> {
       'userId': widget.userId,
     };
     var response = await http.post(
-      // Uri.parse(
-      //     'http://192.168.43.50:8000/apis/v1/homePage/api_changePassword/'),
       Uri.parse(
           '${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_changePassword/'),
       body: jsonEncode(data),

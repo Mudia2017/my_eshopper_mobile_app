@@ -45,8 +45,6 @@ class _MyOrderSessionState extends State<MyOrderSession> {
   getMyOrders() async {
     var data = {};
     var response = await http.post(
-      // Uri.parse(
-      //     'http://192.168.43.50:8000/apis/v1/homePage/api_myOrderSession/'),
       Uri.parse(
           '${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_myOrderSession/'),
       body: jsonEncode(data),

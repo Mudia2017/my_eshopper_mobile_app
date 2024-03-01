@@ -38,8 +38,6 @@ class _AdminUpdateOrderState extends State<AdminUpdateOrder> {
   getDetailOrder() async {
     var data = {'order_no': widget.orderNo};
     var response = await http.post(
-      // Uri.parse(
-      //     'http://192.168.43.50:8000/apis/v1/homePage/api_adminEditOrder/'),
       Uri.parse(
           '${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_adminEditOrder/'),
       body: jsonEncode(data),

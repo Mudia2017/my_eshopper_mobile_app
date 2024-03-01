@@ -503,8 +503,6 @@ class DataProcessing extends ChangeNotifier {
     });
 
     var response = await http.post(
-      // Uri.parse(
-      //     "http://192.168.43.50:8000/apis/v1/homePage/api_updateCartData/"),
       Uri.parse(
           "${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_updateCartData/"),
       body: jsonEncode(data),
@@ -537,7 +535,6 @@ class DataProcessing extends ChangeNotifier {
     });
 
     var response = await http.post(
-      // Uri.parse("http://192.168.43.50:8000/apis/v1/homePage/api_cartData/"),
       Uri.parse("${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_cartData/"),
       body: jsonEncode(data),
       headers: {
@@ -576,8 +573,6 @@ class DataProcessing extends ChangeNotifier {
 
     if (token.isNotEmpty) {
       var response = await http.post(
-        // Uri.parse(
-        //     'http://192.168.43.50:8000/apis/v1/homePage/api_processOrder/'),
         Uri.parse(
             '${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_processOrder/'),
         body: jsonEncode(data),
@@ -598,8 +593,6 @@ class DataProcessing extends ChangeNotifier {
     } else {
       // ======= ITS A GUEST USER REQUEST ==========
       var response = await http.post(
-        // Uri.parse(
-        //     'http://192.168.43.50:8000/apis/v1/homePage/api_processOrder/'),
         Uri.parse(
             '${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_processOrder/'),
         body: jsonEncode(data),
@@ -625,8 +618,6 @@ class DataProcessing extends ChangeNotifier {
   Future guestVerifyCartItems(List ptdData) async {
     var serverResponseMsg;
     var response = await http.post(
-      // Uri.parse(
-      //     'http://192.168.43.50:8000/apis/v1/homePage/api_guestVerifyCartItems/'),
       Uri.parse(
           '${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_guestVerifyCartItems/'),
       body: jsonEncode(ptdData),
@@ -652,8 +643,6 @@ class DataProcessing extends ChangeNotifier {
     var isHeartFill = false;
     var data = {'wishList': wishListType, 'ptdId': ptdId};
     var response = await http.post(
-      // Uri.parse(
-      //     'http://192.168.43.50:8000/apis/v1/homePage/api_get_PtdDetail_SameCategoryPtd/'),
       Uri.parse(
           '${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_get_PtdDetail_SameCategoryPtd/'),
       body: jsonEncode(data),
@@ -709,8 +698,6 @@ class DataProcessing extends ChangeNotifier {
     };
 
     var response = await http.post(
-      // Uri.parse(
-      //     'http://192.168.43.50:8000/apis/v1/homePage/api_adminEditOrder/'),
       Uri.parse(
           '${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_adminEditOrder/'),
       body: jsonEncode(data),
@@ -762,8 +749,6 @@ class DataProcessing extends ChangeNotifier {
     };
 
     var response = await http.post(
-      // Uri.parse(
-      //     'http://192.168.43.50:8000/apis/v1/homePage/api_adminProcessRefundOrder/'),
       Uri.parse(
           '${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_adminProcessRefundOrder/'),
       body: jsonEncode(data),
@@ -826,8 +811,6 @@ class DataProcessing extends ChangeNotifier {
       'ptdReviewId': ptdReviewId,
     };
     var response = await http.post(
-      // Uri.parse(
-      //     'http://192.168.43.50:8000/apis/v1/homePage/api_writePtdReview/'),
       Uri.parse(
           '${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_writePtdReview/'),
       body: jsonEncode(data),
@@ -875,7 +858,6 @@ class DataProcessing extends ChangeNotifier {
     };
 
     var response = await http.post(
-      // Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_wishList/'),
       Uri.parse('${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_wishList/'),
       body: jsonEncode(data),
       headers: {
@@ -914,7 +896,6 @@ class DataProcessing extends ChangeNotifier {
       'action': action,
     };
     var response = await http.post(
-      // Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_traderStore/'),
       Uri.parse(
           '${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_traderStore/'),
       body: jsonEncode(data),
@@ -957,8 +938,6 @@ class DataProcessing extends ChangeNotifier {
     };
 
     var response = await http.post(
-      // Uri.parse(
-      //     'http://192.168.43.50:8000/apis/v1/homePage/api_productOverView/'),
       Uri.parse(
           '${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_productOverView/'),
       body: jsonEncode(data),
@@ -1002,7 +981,6 @@ class DataProcessing extends ChangeNotifier {
       'editPrdRcd': editPtdRcd
     };
     var response = await http.post(
-      // Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_editProduct/'),
       Uri.parse(
           '${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_editProduct/'),
       body: jsonEncode(data),
@@ -1055,7 +1033,6 @@ class DataProcessing extends ChangeNotifier {
     var serverRes = '';
     var request = http.MultipartRequest(
       'POST',
-      // Uri.parse("http://192.168.43.50:8000/apis/v1/homePage/api_editProduct/"),
       Uri.parse(
           "${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_editProduct/"),
     );
@@ -1135,7 +1112,6 @@ class DataProcessing extends ChangeNotifier {
 
     var request = http.MultipartRequest(
       'POST',
-      // Uri.parse("http://192.168.43.50:8000/apis/v1/homePage/api_addProduct/"),
       Uri.parse(
           "${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_addProduct/"),
     );
@@ -1200,8 +1176,6 @@ class DataProcessing extends ChangeNotifier {
       'addressRecord': addressRecord,
     };
     var response = await http.post(
-      // Uri.parse(
-      //     'http://192.168.43.50:8000/apis/v1/homePage/api_updateCustomerAddress/'),
       Uri.parse(
           '${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_updateCustomerAddress/'),
       body: jsonEncode(data),
@@ -1241,7 +1215,6 @@ class DataProcessing extends ChangeNotifier {
       'value': value,
     };
     var response = await http.post(
-      // Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_adminSetting/'),
       Uri.parse(
           '${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_adminSetting/'),
       body: jsonEncode(data),
@@ -1278,8 +1251,6 @@ class DataProcessing extends ChangeNotifier {
       'call': call,
     };
     var response = await http.post(
-      // Uri.parse(
-      //     'http://192.168.43.50:8000/apis/v1/homePage/api_ptdCategoryBrand/'),
       Uri.parse(
           '${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_ptdCategoryBrand/'),
       body: jsonEncode(data),
@@ -1316,7 +1287,6 @@ class DataProcessing extends ChangeNotifier {
     };
     var serverResponseMsg;
     var response = await http.post(
-      // Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_cartData/'),
       Uri.parse('${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_cartData/'),
       body: jsonEncode(data),
       headers: {
@@ -1346,8 +1316,6 @@ class DataProcessing extends ChangeNotifier {
     var response;
     Map data = {'call': call};
     response = await http.post(
-      // Uri.parse(
-      //     "http://192.168.43.50:8000/apis/v1/homePage/api_allRecentView/"),
       Uri.parse(
           "${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_allRecentView/"),
       body: json.encode(data),
@@ -1380,8 +1348,6 @@ class DataProcessing extends ChangeNotifier {
     var response;
     Map data = {'storeId': storeId};
     response = await http.post(
-      // Uri.parse(
-      //     "http://192.168.43.50:8000/apis/v1/homePage/api_allSellerItems/"),
       Uri.parse(
           "${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_allSellerItems/"),
       body: json.encode(data),

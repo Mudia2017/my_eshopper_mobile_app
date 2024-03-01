@@ -79,9 +79,6 @@ class _MarketPlaceState extends State<MarketPlace> {
     // THE SERVER.
     if (widget.token != '') {
       var response = await http.post(
-        // Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_eshop/'),
-        // Uri.parse('http://192.168.100.88:8000/apis/v1/homePage/api_eshop/'),
-        // Uri.parse('http://127.0.0.1:8000/apis/v1/homePage/api_eshop/'),
         Uri.parse('${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_eshop/'),
         body: jsonEncode(data),
         headers: {
@@ -109,7 +106,6 @@ class _MarketPlaceState extends State<MarketPlace> {
       }
     } else {
       var response = await http.post(
-        // Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_eshop/'),
         Uri.parse('${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_eshop/'),
       );
 

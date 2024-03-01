@@ -98,10 +98,6 @@ class _SideDrawerState extends State<SideDrawer> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
 
     var response = await http.post(
-      // Uri.parse('http://192.168.1.36:8000/apis/v1/homePage/api_logout/'),
-      // Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_logout/'),
-      // Uri.parse("http://127.0.0.1:8000/apis/v1/homePage/api_logout/"),
-      // Uri.parse('http://172.20.10.5:8000/apis/v1/homePage/api_logout/'),
       Uri.parse('${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_logout/'),
     );
 

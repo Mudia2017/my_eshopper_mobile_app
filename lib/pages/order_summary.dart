@@ -42,7 +42,6 @@ class _CustomerOrderSummaryState extends State<CustomerOrderSummary> {
     };
 
     var response = await http.post(
-      // Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_cartData/'),
       Uri.parse('${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_cartData/'),
       body: jsonEncode(data),
       headers: {

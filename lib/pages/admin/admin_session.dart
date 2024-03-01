@@ -63,7 +63,6 @@ class _AdminSessionState extends State<AdminSession> {
   getCreatedOrders() async {
     var data = {};
     var response = await http.post(
-      // Uri.parse('http://192.168.43.50:8000/apis/v1/homePage/api_adminSession/'),
       Uri.parse(
           '${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_adminSession/'),
       body: jsonEncode(data),

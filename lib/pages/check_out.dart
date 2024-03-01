@@ -47,8 +47,6 @@ class _CustomerCheckOutState extends State<CustomerCheckOut> {
     Map data = {"name": cusName};
 
     var response = await http.post(
-        // Uri.parse(
-        //     'http://192.168.43.50:8000/apis/v1/homePage/api_getShippingAdd/'),
         Uri.parse(
             '${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_getShippingAdd/'),
         body: json.encode(data),

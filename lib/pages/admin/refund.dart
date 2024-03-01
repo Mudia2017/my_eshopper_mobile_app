@@ -34,8 +34,6 @@ class _RefundState extends State<Refund> {
   loadRefundOrder() async {
     var data = {'transId': widget.orderNo};
     var response = await http.post(
-      // Uri.parse(
-      //     'http://192.168.43.50:8000/apis/v1/homePage/api_adminProcessRefundOrder/'),
       Uri.parse(
           '${dotenv.env['URL_ENDPOINT']}/apis/v1/homePage/api_adminProcessRefundOrder/'),
       body: jsonEncode(data),
